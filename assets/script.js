@@ -1,5 +1,7 @@
 console.log("Howdy");
 
+var boxElem = document.querySelector("#color-flip-box");
+
 var quizBoxes = [
     {
         question1: "q1answer"
