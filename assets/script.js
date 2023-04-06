@@ -41,11 +41,12 @@ boxElem.addEventListener("click", function () {
         boxIsGreen = false;
     }
     else{
-        boxElem.style.backgroundColor = "green";
+        boxElem.style.backgroundColor = "aquamarine";
         boxIsGreen = true;
     }
     
-    console.log(quizBoxes[boxIndex].name);
+    //boxElem.innerHTML = quizBoxes[boxIndex].name;
+    boxElem.textContent = quizBoxes[boxIndex].name;
     boxIndex++;
     if(boxIndex >= quizBoxes.length)
         boxIndex = 0;
