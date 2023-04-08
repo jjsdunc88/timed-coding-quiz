@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,32 @@
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
+    <div id="color-flip-box">
+        Original Content
+    </div>
+    <button id="startBtn">Start Quiz</button>
+    <main id="content-container" class="content-container hide" >
+        <h1 id="question-container">Your Code Quiz Title Here</h1>
+        <section id="choices-container" class="choices-container">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+            <button>Button 4</button>
+        </section>
+    </main>
 
 
-<div id="color-flip-box">
-    Original Content
-</div>
+
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
+
+
 
 <!--TODO:create boxes based on an array (come back to this)
     TODO:switch content of box after each click
     TODO    : change color of box after each click - DONE-->
-
-
-<script src="./assets/script.js"></script>
-</body>
-</html>
