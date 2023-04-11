@@ -2,7 +2,11 @@ body{
     background-color: #DDD;
 }
 
-.content-container {
+#color-flip-box {
+    border: solid 2px red;
+}
+
+#content-container {
     border: solid 2px red;
 }
 

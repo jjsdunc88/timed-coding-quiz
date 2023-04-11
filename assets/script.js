@@ -46,7 +46,7 @@ function startQuiz() {
     console.log('quiz started');
     // now what do we need to do?
     //let s unhide the main container
-    contentContainer.classList.remove('hide');
+    contentContainer.classList.remove('hide');   //how is this targeting?
     showNextQuestion(currQuestion);
 }
 
@@ -92,28 +92,7 @@ choicesContainer.addEventListener('click', checkAnswer);
 
 
 
-boxElem.style.backgroundColor = "green";
-var boxIsGreen = true;
-var boxIndex = 0;
 
-// on every click
-boxElem.addEventListener("click", function () {
-    // if box is green
-    if (boxIsGreen) {
-        boxElem.style.backgroundColor = "yellow";
-        boxIsGreen = false;
-    }
-    else{
-        boxElem.style.backgroundColor = "aquamarine";
-        boxIsGreen = true;
-    }
-    
-    //boxElem.innerHTML = quizBoxes[boxIndex].name;
-    boxElem.textContent = questionArray[boxIndex].name;
-    boxIndex++;
-    if(boxIndex >= questionArray.length)
-        boxIndex = 0;
-});
 
 
 
