@@ -23,21 +23,53 @@ var questionArray = [
         choices: [ 'A', 'B', 'C', 'D'],
         correct: 'D'
     },
-    // {
-    //     name: "q2answer"
-    // },
+    {
+        title: "q3",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'A'
+    },
 
-    // {
-    //     name: "q3answer"
-    // },
+    {
+        title: "q4",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'D'
+    },
 
-    // {
-    //     name: "q4answer"
-    // },
+    {
+        title: "q5",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'A'
+    },
 
-    // {
-    //     name: "q5answer"
-    // },
+    {
+        title: "q6",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'C'
+    },
+
+    {
+        title: "q7",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'A'
+    },
+
+    {
+        title: "q8",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'C'
+    },
+
+    {
+        title: "q9",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'D'
+    },
+
+    {
+        title: "q10",
+        choices: [ 'A', 'B', 'C', 'D'],
+        correct: 'B'
+    },
 ];
 
 
