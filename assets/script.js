@@ -1,19 +1,15 @@
-console.log("Howdy");
+
 var boxElem = document.querySelector("#color-flip-box");
-// Javascript variables which references elements in the DOM go here
 var contentContainer = document.getElementById('content-container');
 var questionContainer = document.getElementById('question-container');
 var choicesContainer = document.getElementById('choices-container');
-console.log(choicesContainer);
 var startBtn = document.getElementById('startBtn');
 var choicesBtns = Array.from(document.querySelectorAll('.choices-container button'));
-console.log(choicesBtns);
-var quizTime = 5;
+var quizTime = 100;
 var timerContainer = document.getElementById("timer");
-
-// store the value of the current question I'm on here
 var currQuestion = 0;
-// Question 1 answers present for all questions
+
+
 var questionArray = [
     {
         title: "1. Which method outputs a message to the web console? ",
@@ -77,13 +73,9 @@ var questionArray = [
 
 // run this function when the start button is clicked
 function startQuiz() {
-    console.log('quiz started');
-    // now what do we need to do?
-    //let s unhide the main container
-    contentContainer.classList.remove('hide');   //how is this targeting?
+    contentContainer.classList.remove('hide');
     showNextQuestion(currQuestion);
 }
-
 
 
 function checkAnswer(event) {
@@ -105,27 +97,25 @@ function selectedRight() {
 
 function selectedWrong() {
     console.log('selected wrong!');
-    quizTime = quizTime-10;
+    quizTime = quizTime - 10;
 }
 
 
 function beginTime() {
-    timerContainer.textContent = "Time Left:5";
+    timerContainer.textContent = "Time Left:100";
 
     var quizTimer = setInterval(function () {
-        // console.log((quizTime--));
+
         // if time left is less than or equal to zero, run showSaveUserScore
-        if(quizTime <= 0) {
+        if (quizTime <= 0) {
             timerContainer.textContent = 'Times up!';
             clearInterval(quizTimer);
             // now run the fuction
             saveUserScore();
             return null;
         }
-        // now set the text content of the timer container
-        timerContainer.textContent = "Time Left:" + quizTime; // equivalent to "Time Left:".concat(quizTimer);
-        // quizTime.textContent = `Time Left: ${quizTimer}`;
-        // actually subtract 1 from quizTime
+
+        timerContainer.textContent = "Time Left:" + quizTime;
         quizTime--;
 
     }, 1000);
@@ -154,7 +144,7 @@ function saveUserScore() {
     // .setattribute("class", "yourClassName")
     var scoreButton = document.createElement("button");
     scoreButton.textContent = "Submit Initials";
-    scoreBox.append(userInput,scoreButton);
+    scoreBox.append(userInput, scoreButton);
     contentContainer.append(scoreBox);
 }
 
