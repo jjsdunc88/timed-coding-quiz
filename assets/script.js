@@ -36,7 +36,7 @@ var questionArray = [
     },
 
     {
-        title: "5. If expression1 is true and expression2 is false, what would (expression1 || expression2) evauluate to?",
+        title: "5. If expression1 is true and expression2 is false, what would (expression1 || expression2) evaluate to?",
         choices: [ 'A. Equal', 'B. Not equal', 'C. False', 'D. True'],
         correct: 'D. True'
     },
@@ -60,15 +60,15 @@ var questionArray = [
     },
 
     {
-        title: "q9",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'D'
+        title: "9. Using a 'for' loop to execute code for each item in a collection is:",
+        choices: [ 'A. Object Methods', 'B. Scope', 'C. Parameter', 'D. Iteration'],
+        correct: 'D. Iteration'
     },
 
     {
-        title: "q10",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'B'
+        title: "10. Reusable blocks of code that perform specific tasks are known as:",
+        choices: [ 'A. Algorithms', 'B. Functions', 'C. Loops', 'D. Variables'],
+        correct: 'B. Functions'
     },
 ];
 
