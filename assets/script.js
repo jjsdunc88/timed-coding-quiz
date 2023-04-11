@@ -24,39 +24,39 @@ var questionArray = [
         correct: 'B. Array'
     },
     {
-        title: "3. Which answer shows strict equality?",
+        title: "3. Which expression shows strict equality?",
         choices: [ 'A. (b == c)', 'B. (b === c)', 'C. (b != c)', 'D. (b !== c)'],
         correct: 'B. (b === c)'
     },
 
     {
-        title: "q4",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'D'
+        title: "4. If expression1 and expressions2 are both true, what would (expression1 && expression2) evaluate to?",
+        choices: [ 'A. Equal', 'B. Not equal', 'C. False', 'D. True'],
+        correct: 'D. True'
     },
 
     {
-        title: "q5",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'A'
+        title: "5. If expression1 is true and expression2 is false, what would (expression1 || expression2) evauluate to?",
+        choices: [ 'A. Equal', 'B. Not equal', 'C. False', 'D. True'],
+        correct: 'D. True'
     },
 
     {
-        title: "q6",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'C'
+        title: "6. If expression1 is true and expression2 is false, which expression would evaluate to true?",
+        choices: [ 'A. (expression1 && expression2)', 'B. (!expression1 || expression2)', 'C. (expression1 && !expression2)', 'D. (!expression1 && expression2)'],
+        correct: 'C. (expression1 && !expression2)'
     },
 
     {
-        title: "q7",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'A'
+        title: "7. Which is not a conditional statement in JavaScript?",
+        choices: [ 'A. When', 'B. If', 'C. Else', 'D. Else if'],
+        correct: 'A. When'
     },
 
     {
-        title: "q8",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'C'
+        title: "8. To store groups of data in a single variable, we would use:",
+        choices: [ 'A. An Index', 'B. A Property', 'C. An Array', 'D. An Element'],
+        correct: 'C. An Array'
     },
 
     {
