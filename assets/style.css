@@ -12,8 +12,8 @@ body{
     display: flex;
     width: 50vw;
     flex-direction: column;
+    
  
-   
 
 }
 
@@ -24,7 +24,7 @@ body{
 }
 
 #content-container {
-    
+    background-color: cadetblue;
     border: solid 2px rgb(41, 8, 187);
 }
 
