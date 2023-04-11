@@ -11,22 +11,22 @@ console.log(choicesBtns);
 
 // store the value of the current question I'm on here
 var currQuestion = 0;
-
+                            // Question 1 answers present for all questions
 var questionArray = [
     {
-        title: "q1",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'B'
+        title: "1. Which method outputs a message to the web console? ",
+        choices: [ 'A. log', 'B. postMessage', 'C. alert', 'D. prompt'],
+        correct: 'A. log'
     },
     {
-        title: "q2",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'D'
+        title: "2. Which is not a primitive data type in JavaScript?",
+        choices: [ 'A. String', 'B. Array', 'C. Boolean', 'D. Number'],
+        correct: 'B. Array'
     },
     {
-        title: "q3",
-        choices: [ 'A', 'B', 'C', 'D'],
-        correct: 'A'
+        title: "3. Which answer shows strict equality?",
+        choices: [ 'A. (b == c)', 'B. (b === c)', 'C. (b != c)', 'D. (b !== c)'],
+        correct: 'B. (b === c)'
     },
 
     {
