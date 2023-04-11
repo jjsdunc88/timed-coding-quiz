@@ -105,7 +105,6 @@ function selectedRight() {
 
 function selectedWrong() {
     console.log('selected wrong!');
-    // user choose incorrectly; subtract time from quizTime variable
     quizTime = quizTime-10;
 }
 
