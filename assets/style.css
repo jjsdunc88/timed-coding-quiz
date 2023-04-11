@@ -1,13 +1,31 @@
 body{
+   display: flex;
+    width: 100%;
+    min-height: 100vw;
     background-color: #DDD;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#content-wrapper{
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+ 
+   
+
 }
 
 #color-flip-box {
+    
+   
     border: solid 2px red;
 }
 
 #content-container {
-    border: solid 2px red;
+    
+    border: solid 2px rgb(41, 8, 187);
 }
 
 
