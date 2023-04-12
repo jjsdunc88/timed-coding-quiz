@@ -153,7 +153,18 @@ function saveUserScore() {
     scoreButton.textContent = "Submit Initials";
     scoreBox.append(userInput, scoreButton);
     contentContainer.append(scoreBox);
+    var userInput = document.createElement("input");
+    userInput.id = "initials";
+    var scoreButton = document.createElement("button");
+    scoreButton.addEventListener("click",getinitials);
 }
+
+function getinitials(){
+    var initials = document.getElementById("initials").value;
+    console.log(initials);
+    //  now initials will have the value submitted to the  text box and you can save that to local storage.
+   }
+
 
 // create a function which starts the timer
 // then, use that function as the callback to some event listener which you append to the start button too
