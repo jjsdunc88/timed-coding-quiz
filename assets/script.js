@@ -141,22 +141,22 @@ function showNextQuestion(questionIndex) {
     console.log('choicesBtn after forEach', choicesBtns);
 }
 
+
 function saveUserScore() {
     console.log(('function ran'));
     contentContainer.replaceChildren();
     var scoreBox = document.createElement("div");
+    scoreBox.id = "scoreBox";
     var userInput = document.createElement("input");
+    userInput.id = "initials"
     userInput.setAttribute("Placeholder", "Enter initials here");
     // also set style attributes here later, for everything
     // .setattribute("class", "yourClassName")
     var scoreButton = document.createElement("button");
+    scoreButton.addEventListener("click",getinitials);
     scoreButton.textContent = "Submit Initials";
     scoreBox.append(userInput, scoreButton);
     contentContainer.append(scoreBox);
-    var userInput = document.createElement("input");
-    userInput.id = "initials";
-    var scoreButton = document.createElement("button");
-    scoreButton.addEventListener("click",getinitials);
 }
 
 function getinitials(){
