@@ -8,6 +8,8 @@ var choicesBtns = Array.from(document.querySelectorAll('.choices-container butto
 var quizTime = 100;
 var timerContainer = document.getElementById("timer");
 var currQuestion = 0;
+var timeScore = 0;
+var quizTimer = setInterval;
 
 
 var questionArray = [
@@ -79,17 +81,23 @@ function startQuiz() {
 
 
 function checkAnswer(event) {
-    console.log('click heard');
-    // console.log('event is', event);
+    
     if (event.target.matches('button')) {
         // check what the answer choice was that was clicked on and compare it to the current question's correct value property
         event.target.textContent == questionArray[currQuestion]['correct'] ? selectedRight() : selectedWrong();
     }
-    // add one to the currQuestion variable
-    currQuestion++ // currQuestion = currQuestion + 1;
-    // progress to the next question
-    showNextQuestion(currQuestion);
+    currQuestion++ 
+    
+    if (currQuestion === 10) {
+        saveUserScore();
+        clearInterval(quizTimer);
+        timeScore = quizTime;
+        timerContainer.textContent = 'Times up!'
+    }
+    else (showNextQuestion(currQuestion));
+
 }
+
 
 function selectedRight() {
     console.log('selected right!');
@@ -104,13 +112,12 @@ function selectedWrong() {
 function beginTime() {
     timerContainer.textContent = "Time Left:100";
 
-    var quizTimer = setInterval(function () {
+    quizTimer = setInterval(function () {
 
-        // if time left is less than or equal to zero, run showSaveUserScore
+
         if (quizTime <= 0) {
             timerContainer.textContent = 'Times up!';
             clearInterval(quizTimer);
-            // now run the fuction
             saveUserScore();
             return null;
         }
