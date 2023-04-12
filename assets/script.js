@@ -10,6 +10,7 @@ var timerContainer = document.getElementById("timer");
 var currQuestion = 0;
 var timeScore = 0;
 var quizTimer = setInterval;
+var userScores = [];
 
 
 var questionArray = [
@@ -73,11 +74,21 @@ var questionArray = [
 ];
 
 
-// run this function when the start button is clicked
+
 function startQuiz() {
     contentContainer.classList.remove('hide');
     showNextQuestion(currQuestion);
 }
+
+
+function showNextQuestion(questionIndex) {
+    questionContainer.textContent = questionArray[questionIndex]["title"];
+    choicesBtns.forEach(function (button, index) {
+        button.textContent = questionArray[questionIndex]["choices"][index];
+        button.setAttribute('class', 'someValue');
+    })
+}
+
 
 
 function checkAnswer(event) {
@@ -127,23 +138,10 @@ function beginTime() {
 
     }, 1000);
 
-
-}
-
-function showNextQuestion(questionIndex) {
-    console.log(('choicesBtn before forEach', choicesBtns));
-    questionContainer.textContent = questionArray[questionIndex]["title"];
-    choicesBtns.forEach(function (button, index) {
-        button.textContent = questionArray[questionIndex]["choices"][index];
-        button.setAttribute('class', 'someValue');
-        // button.addEventListener('click', checkAnswer);
-    })
-    console.log('choicesBtn after forEach', choicesBtns);
 }
 
 
 function saveUserScore() {
-    console.log(('function ran'));
     contentContainer.replaceChildren();
     var scoreBox = document.createElement("div");
     scoreBox.id = "scoreBox";
@@ -159,6 +157,7 @@ function saveUserScore() {
     contentContainer.append(scoreBox);
 }
 
+
 function getinitials(){
     var initials = document.getElementById("initials").value;
     console.log(initials);
@@ -166,16 +165,13 @@ function getinitials(){
    }
 
 
-// create a function which starts the timer
-// then, use that function as the callback to some event listener which you append to the start button too
 
 startBtn.addEventListener('click', startQuiz);
 startBtn.addEventListener('click', beginTime);
-// add event listener to this line
 choicesContainer.addEventListener('click', checkAnswer);
 
 
-
+var userScores = JSON.parse(localStorage.getItem("userScores")) || [];
 
 
 

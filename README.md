@@ -15,7 +15,7 @@ During this project, I continued to learn about basic JavaScript function and dy
 
 ## Credits
 
-I worked with classmate [Myro Lee](https://github.com/myrojoylee) and tutor James Compagnoni to gain a better understanding of JavaScript and talk through problems presented in this challenge.
+I worked with classmate [Myro Lee](https://github.com/myrojoylee), tutor James Compagnoni and AskBCS to gain a better understanding of JavaScript and talk through problems presented in this challenge.
 
 
 ## License
