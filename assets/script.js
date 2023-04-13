@@ -11,7 +11,7 @@ var currQuestion = 0;
 var timeScore = 0;
 var quizTimer = setInterval;
 var userScores = [];
-
+var initials;
 
 var questionArray = [
     {
@@ -92,13 +92,13 @@ function showNextQuestion(questionIndex) {
 
 
 function checkAnswer(event) {
-    
+
     if (event.target.matches('button')) {
         // check what the answer choice was that was clicked on and compare it to the current question's correct value property
         event.target.textContent == questionArray[currQuestion]['correct'] ? selectedRight() : selectedWrong();
     }
-    currQuestion++ 
-    
+    currQuestion++
+
     if (currQuestion === 10) {
         saveUserScore();
         clearInterval(quizTimer);
@@ -151,18 +151,42 @@ function saveUserScore() {
     // also set style attributes here later, for everything
     // .setattribute("class", "yourClassName")
     var scoreButton = document.createElement("button");
-    scoreButton.addEventListener("click",getinitials);
+    scoreButton.addEventListener("click", getinitials);
     scoreButton.textContent = "Submit Initials";
     scoreBox.append(userInput, scoreButton);
     contentContainer.append(scoreBox);
 }
 
 
-function getinitials(){
-    var initials = document.getElementById("initials").value;
+
+
+function getinitials() {
+    initials = document.getElementById("initials").value;
     console.log(initials);
+    displayUserScore();
     //  now initials will have the value submitted to the  text box and you can save that to local storage.
-   }
+}
+
+function displayUserScore() {
+    var tempVar = { initials: initials, score: timeScore };
+    console.log(tempVar);
+    if (localStorage.length === 0) {
+        userScores.push(tempVar);
+        localStorage.setItem("scoreKey", JSON.stringify(userScores));
+    } else {
+        userScores = JSON.parse(localStorage.getItem("scoreKey"));
+        userScores.push(tempVar);
+        localStorage.setItem("scoreKey", JSON.stringify(userScores));
+    }
+
+    for (var i = 0; i < userScores.length; i++){
+        var x = document.createElement("p");
+        x.setAttribute("color", "black");
+        timerContainer.appendChild(x);
+        x.textContent = `${userScores[i].initials}: ${userScores[i].score}`;
+    }
+
+}
 
 
 
@@ -171,7 +195,7 @@ startBtn.addEventListener('click', beginTime);
 choicesContainer.addEventListener('click', checkAnswer);
 
 
-var userScores = JSON.parse(localStorage.getItem("userScores")) || [];
+// var userScores = JSON.parse(localStorage.getItem("userScores")) || [];
 
 
 
