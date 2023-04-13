@@ -8,9 +8,9 @@ During this project, I continued to learn about basic JavaScript function and dy
 
 ## Usage
 
-<!-- [alt text]() Add screenshot -->
+[alt text](./assets/Timed%20Quiz.mp4) Add screenshot
 
-<!-- [Click here for live website]() Add live link -->
+[Click here for live website]() Add live link
 
 
 ## Credits
