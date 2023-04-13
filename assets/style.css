@@ -2,9 +2,11 @@ body{
    display: flex;
     width: 100%;
     min-height: 100vw;
-    background-color: #DDD;
+    background-color: #c7e5ee;
     justify-content: center;
     align-content: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     
 }
 
@@ -12,22 +14,38 @@ body{
     display: flex;
     width: 50vw;
     flex-direction: column;
-    
- 
+}
 
+#startBtn{
+   width: 10vw; 
+   display: flex;
+   justify-content: center;
 }
 
 #color-flip-box {
-    
-   
-    border: solid 2px red;
+    display: flex;
+    font-size: 30px;
+    border: solid 5px rgb(39, 104, 226);
+    background-color: rgb(93, 168, 218);
 }
 
 #content-container {
-    background-color: cadetblue;
-    border: solid 2px rgb(41, 8, 187);
+    border: solid 5px rgb(39, 104, 226);
+    background-color: rgb(93, 168, 218);
+    
 }
 
+button {
+    border: solid 1px;
+    font-weight: bold;
+}
+
+
+#choices-container {
+    display: flex;
+    justify-content: space-around;
+   
+}
 
 .hide {
     display: none;
