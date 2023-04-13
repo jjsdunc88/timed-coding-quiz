@@ -8,14 +8,13 @@ During this project, I continued to learn about basic JavaScript function and dy
 
 ## Usage
 
+Demo:
+
 ![Timed Quiz gif](https://user-images.githubusercontent.com/125617546/231839962-7d04a3be-15de-4891-a5bd-93e7045f9a13.gif)
 
-<!-- https://user-images.githubusercontent.com/125617546/231836986-e2a32c2b-0a30-4960-919c-a4fb3ce7eb02.mp4 -->
 
 
-[alt text](./assets/Timed%20Quiz%20gif.gif) Add screenshot
-
-[Click here for live website]() Add live link
+[Click here for live website](https://jjsdunc88.github.io/timed-coding-quiz/)
 
 
 ## Credits
