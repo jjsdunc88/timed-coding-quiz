@@ -1,3 +1,5 @@
+/* General Styling-------> */
+
 body{
    display: flex;
     width: 100%;
@@ -10,17 +12,14 @@ body{
     
 }
 
+/* Main Container Styling---------> */
+
 #content-wrapper{
     display: flex;
     width: 50vw;
     flex-direction: column;
 }
 
-#startBtn{
-   width: 10vw; 
-   display: flex;
-   justify-content: center;
-}
 
 #color-flip-box {
     display: flex;
@@ -32,7 +31,22 @@ body{
 #content-container {
     border: solid 5px rgb(39, 104, 226);
     background-color: rgb(93, 168, 218);
-    
+}
+
+
+
+/* Button Styling--------> */
+
+#startBtn{
+    width: 10vw; 
+    display: flex;
+    justify-content: center;
+ }
+ 
+
+#choices-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 button {
@@ -41,11 +55,7 @@ button {
 }
 
 
-#choices-container {
-    display: flex;
-    justify-content: space-around;
-   
-}
+/* Hides content until start button is pressed----> */
 
 .hide {
     display: none;
