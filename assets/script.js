@@ -13,6 +13,9 @@ var quizTimer = setInterval;
 var userScores = [];
 var initials;
 
+
+// QUESTION BANK -------------------------->
+
 var questionArray = [
     {
         title: "1. Which method outputs a message to the web console? ",
@@ -74,12 +77,14 @@ var questionArray = [
 ];
 
 
+// Starts the Quiz ------------------->
 
 function startQuiz() {
     contentContainer.classList.remove('hide');
     showNextQuestion(currQuestion);
 }
 
+// Shows Questions -------------------->
 
 function showNextQuestion(questionIndex) {
     questionContainer.textContent = questionArray[questionIndex]["title"];
@@ -89,12 +94,11 @@ function showNextQuestion(questionIndex) {
     })
 }
 
-
+// Checks Answers, deducts time for wrong answers, cycles questions ------------------->
 
 function checkAnswer(event) {
 
     if (event.target.matches('button')) {
-        // check what the answer choice was that was clicked on and compare it to the current question's correct value property
         event.target.textContent == questionArray[currQuestion]['correct'] ? selectedRight() : selectedWrong();
     }
     currQuestion++
@@ -114,11 +118,14 @@ function selectedRight() {
     console.log('selected right!');
 }
 
+
 function selectedWrong() {
     console.log('selected wrong!');
     quizTime = quizTime - 10;
 }
 
+
+// Quiz Timer --------------------->
 
 function beginTime() {
     timerContainer.textContent = "Time Left:100";
@@ -140,6 +147,7 @@ function beginTime() {
 
 }
 
+// Saves and displays user scores and initials ------------------>
 
 function saveUserScore() {
     contentContainer.replaceChildren();
@@ -148,8 +156,6 @@ function saveUserScore() {
     var userInput = document.createElement("input");
     userInput.id = "initials"
     userInput.setAttribute("Placeholder", "Enter initials here");
-    // also set style attributes here later, for everything
-    // .setattribute("class", "yourClassName")
     var scoreButton = document.createElement("button");
     scoreButton.addEventListener("click", getinitials);
     scoreButton.textContent = "Submit Initials";
@@ -158,14 +164,12 @@ function saveUserScore() {
 }
 
 
-
-
 function getinitials() {
     initials = document.getElementById("initials").value;
     console.log(initials);
     displayUserScore();
-    //  now initials will have the value submitted to the  text box and you can save that to local storage.
 }
+
 
 function displayUserScore() {
     var tempVar = { initials: initials, score: timeScore };
@@ -179,7 +183,7 @@ function displayUserScore() {
         localStorage.setItem("scoreKey", JSON.stringify(userScores));
     }
 
-    for (var i = 0; i < userScores.length; i++){
+    for (var i = 0; i < userScores.length; i++) {
         var x = document.createElement("p");
         x.setAttribute("color", "black");
         timerContainer.appendChild(x);
@@ -189,13 +193,12 @@ function displayUserScore() {
 }
 
 
-
 startBtn.addEventListener('click', startQuiz);
 startBtn.addEventListener('click', beginTime);
 choicesContainer.addEventListener('click', checkAnswer);
 
 
-// var userScores = JSON.parse(localStorage.getItem("userScores")) || [];
+
 
 
 
