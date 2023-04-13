@@ -8,6 +8,10 @@ During this project, I continued to learn about basic JavaScript function and dy
 
 ## Usage
 
+
+https://user-images.githubusercontent.com/125617546/231836986-e2a32c2b-0a30-4960-919c-a4fb3ce7eb02.mp4
+
+
 [alt text](./assets/Timed%20Quiz.mp4) Add screenshot
 
 [Click here for live website]() Add live link
